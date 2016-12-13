@@ -1,0 +1,12 @@
+C:\Users\ML15AAF\Documents\GitHub\MazeSolver\MazeSolver\MazeSolver\bin\Debug\MazeSolver.exe.config
+C:\Users\ML15AAF\Documents\GitHub\MazeSolver\MazeSolver\MazeSolver\bin\Debug\Mazes\large_input.txt
+C:\Users\ML15AAF\Documents\GitHub\MazeSolver\MazeSolver\MazeSolver\bin\Debug\Mazes\medium_input.txt
+C:\Users\ML15AAF\Documents\GitHub\MazeSolver\MazeSolver\MazeSolver\bin\Debug\Mazes\small.txt
+C:\Users\ML15AAF\Documents\GitHub\MazeSolver\MazeSolver\MazeSolver\bin\Debug\Mazes\sparse_medium.txt
+C:\Users\ML15AAF\Documents\GitHub\MazeSolver\MazeSolver\MazeSolver\bin\Debug\MazeSolver.exe
+C:\Users\ML15AAF\Documents\GitHub\MazeSolver\MazeSolver\MazeSolver\obj\Debug\MazeSolver.csprojResolveAssemblyReference.cache
+C:\Users\ML15AAF\Documents\GitHub\MazeSolver\MazeSolver\MazeSolver\obj\Debug\MazeSolver.exe
+C:\Users\ML15AAF\Documents\GitHub\MazeSolver\MazeSolver\MazeSolver\obj\Debug\MazeSolver.pdb
+C:\Users\ML15AAF\Documents\GitHub\MazeSolver\MazeSolver\MazeSolver\bin\Debug\MazeSolver.pdb
+C:\Users\ML15AAF\Documents\GitHub\MazeSolver\MazeSolver\MazeSolver\obj\Debug\MazeSolver.Properties.Resources.resources
+C:\Users\ML15AAF\Documents\GitHub\MazeSolver\MazeSolver\MazeSolver\obj\Debug\MazeSolver.csproj.GenerateResource.Cache
