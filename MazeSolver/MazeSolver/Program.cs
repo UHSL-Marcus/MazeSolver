@@ -44,10 +44,6 @@ namespace MazeSolver
                 maze.Solve();
             }
 
-
-            
-
-
             // list all txt files in the given dir(s) as well as default (./Mazes).
             string options = "Available txt Files:\n";
             if (args.Length > 0)
@@ -105,7 +101,7 @@ namespace MazeSolver
 
                                     // preview maze
                                     Console.Write(maze.ToString());
-                                    Console.WriteLine("Press any key to solve...");
+                                    Console.WriteLine("Maze loaded in {0} Ticks, {1}ms. Press any key to solve...", maze.getLoadTicks(), maze.getLoadMillis());
                                     stopwatch_overall.Stop();
                                     Console.ReadLine();
                                     stopwatch_overall.Start();
@@ -115,12 +111,13 @@ namespace MazeSolver
                                     {
                                         Console.WriteLine("Solved! Drawing result...");
                                         Console.Write(maze.ResultString());
+                                        Console.WriteLine("Maze solved in {0} ticks, {1}ms", maze.getSolvedTicks(), maze.getSolvedMillis());
+                                        Console.WriteLine("Maze loaded and solved in {0} ticks, {1}ms", maze.getSolvedTicks() + maze.getLoadTicks(), maze.getSolvedMillis() + maze.getLoadMillis());
                                     } else
                                     {
                                         Console.WriteLine("Unable to solve maze.");
                                     }
                                     stopwatch_overall.Stop();
-                                    Console.WriteLine("Maze solved in {0} ticks, {1}ms", maze.getSolvedTicks(), maze.getSolvedMillis());
                                     Console.WriteLine("Total time for entire operation: {0} ticks, {1}ms. Press any key to continue.", stopwatch_overall.ElapsedTicks, stopwatch_overall.ElapsedMilliseconds);
                                     Console.ReadLine();
                                 }

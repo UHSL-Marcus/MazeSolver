@@ -59,14 +59,5 @@ namespace MazeSolverTester.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        internal static string ConsoleInput {
-            get {
-                return ResourceManager.GetString("ConsoleInput", resourceCulture);
-            }
-        }
     }
 }

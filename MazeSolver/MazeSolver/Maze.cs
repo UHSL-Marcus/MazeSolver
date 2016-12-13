@@ -47,6 +47,11 @@ namespace MazeSolver
 
         // Timing the solving operation
         private Stopwatch stopwatch = new Stopwatch();
+        private long loadOpTicks = 0;
+        private long loadOpMillis = 0;
+
+        private long solveTicks = 0;
+        private long solveMillis = 0;
 
         bool Loaded = false;
 
@@ -74,6 +79,8 @@ namespace MazeSolver
         /// </returns>
         public bool LoadMaze(Stream mazeInfo)
         {
+            stopwatch.Restart();
+
             bool success = false;
 
             StreamReader mazeFile = new StreamReader(mazeInfo);
@@ -133,6 +140,11 @@ namespace MazeSolver
                 
             }
 
+            stopwatch.Stop();
+
+            loadOpMillis = stopwatch.ElapsedMilliseconds;
+            loadOpTicks = stopwatch.ElapsedTicks;
+
             Loaded = success;
             return success;
         }
@@ -148,7 +160,7 @@ namespace MazeSolver
         public bool Solve()
         {
             // tested copying the fields to local variables here, it gave no signficat benefit to the speed of the algorithm when averaging 1000 large maze solves.
-            stopwatch.Start();
+            stopwatch.Restart();
 
             // start with the starting point
             Queue<currentPoint> todo = new Queue<currentPoint>();
@@ -219,6 +231,9 @@ namespace MazeSolver
                 }
             }
             stopwatch.Stop();
+
+            solveMillis = stopwatch.ElapsedMilliseconds;
+            solveTicks = stopwatch.ElapsedTicks;
 
             return endFound;
         }
@@ -294,7 +309,7 @@ namespace MazeSolver
         /// </returns>
         public long getSolvedTicks()
         {
-            return stopwatch.ElapsedTicks;
+            return solveTicks;
         }
 
         /// <summary>
@@ -305,7 +320,29 @@ namespace MazeSolver
         /// </returns>
         public long getSolvedMillis()
         {
-            return stopwatch.ElapsedMilliseconds;
+            return solveMillis;
+        }
+
+        /// <summary>
+        /// Get the number of processor timer ticks to load maze
+        /// </summary>
+        /// <returns>
+        /// Returns long
+        /// </returns>
+        public long getLoadTicks()
+        {
+            return loadOpTicks;
+        }
+
+        /// <summary>
+        /// Get the number of milliseconds taken to load maze
+        /// </summary>
+        /// <returns>
+        /// Returns long
+        /// </returns>
+        public long getLoadMillis()
+        {
+            return loadOpMillis;
         }
 
         /// <summary>
