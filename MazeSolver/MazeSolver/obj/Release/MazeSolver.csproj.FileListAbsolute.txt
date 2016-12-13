@@ -10,3 +10,5 @@ C:\Users\ML15AAF\Documents\GitHub\MazeSolver\MazeSolver\MazeSolver\obj\Release\M
 C:\Users\ML15AAF\Documents\GitHub\MazeSolver\MazeSolver\MazeSolver\obj\Release\MazeSolver.csprojResolveAssemblyReference.cache
 C:\Users\ML15AAF\Documents\GitHub\MazeSolver\MazeSolver\MazeSolver\obj\Release\MazeSolver.Properties.Resources.resources
 C:\Users\ML15AAF\Documents\GitHub\MazeSolver\MazeSolver\MazeSolver\obj\Release\MazeSolver.csproj.GenerateResource.Cache
+C:\Users\ML15AAF\Documents\GitHub\MazeSolver\MazeSolver\MazeSolver\bin\Release\Mazes\unsolve_input.txt
+C:\Users\ML15AAF\Documents\GitHub\MazeSolver\MazeSolver\MazeSolver\bin\Release\Mazes\wrong_input.txt
