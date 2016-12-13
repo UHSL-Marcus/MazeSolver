@@ -113,14 +113,14 @@ namespace MazeSolver
                                     // solve maze
                                     if (maze.Solve())
                                     {
-                                        Console.WriteLine("Maze solved in {0} ticks, {1}ms", maze.getSolvedTicks(), maze.getSolvedMillis());
-                                        Console.WriteLine("Drawing result...");
-                                        //Console.Write(maze.ResultString());
+                                        Console.WriteLine("Solved! Drawing result...");
+                                        Console.Write(maze.ResultString());
                                     } else
                                     {
                                         Console.WriteLine("Unable to solve maze.");
                                     }
                                     stopwatch_overall.Stop();
+                                    Console.WriteLine("Maze solved in {0} ticks, {1}ms", maze.getSolvedTicks(), maze.getSolvedMillis());
                                     Console.WriteLine("Total time for entire operation: {0} ticks, {1}ms. Press any key to continue.", stopwatch_overall.ElapsedTicks, stopwatch_overall.ElapsedMilliseconds);
                                     Console.ReadLine();
                                 }
