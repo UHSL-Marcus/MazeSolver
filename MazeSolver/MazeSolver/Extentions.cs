@@ -72,4 +72,20 @@ namespace MazeSolver
             return stream;
         }
     }
+
+    /// <summary>
+    /// Contains custom extention methods for the console
+    /// </summary>
+    public static class ConsoleEx
+    {
+        /// <summary>
+        /// Clears the previously written line
+        /// </summary>
+        public static void ClearLine()
+        {
+            Console.SetCursorPosition(0, Console.CursorTop - 1);
+            Console.Write(new string(' ', Console.WindowWidth));
+            Console.SetCursorPosition(0, Console.CursorTop - 1);
+        }
+    }
 }

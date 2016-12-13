@@ -51,14 +51,7 @@ namespace MazeSolver
                 // loop each passed dir path
                 foreach (string path in args)
                 {
-                    if (Directory.Exists(path))
-                    {
-                        options += DisplayOptions(path);
-                    }
-                    else
-                    {
-                        Console.WriteLine("{0} is not a valid directory", path);
-                    }
+                    options += DisplayOptions(path);
                 }
             }
             // include the default
@@ -126,7 +119,7 @@ namespace MazeSolver
 
                         if (!success)
                         {
-                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ConsoleEx.ClearLine();
                             Console.Write(error + " try again: ");
                         }
                     }
@@ -148,16 +141,23 @@ namespace MazeSolver
             string optionList = "";
             int startIdx = fileOptions.Count;
 
-            string[] files = Directory.GetFiles(dir, "*.txt");
-
-            foreach (string file in files)
+            if (Directory.Exists(dir))
             {
-                if (File.Exists(file))
+                string[] files = Directory.GetFiles(dir, "*.txt");
+
+                foreach (string file in files)
                 {
-                    optionList += startIdx + ": " + file + "\n";
-                    fileOptions.Insert(startIdx, file);
-                    startIdx++;
+                    if (File.Exists(file))
+                    {
+                        optionList += startIdx + ": " + file + "\n";
+                        fileOptions.Insert(startIdx, file);
+                        startIdx++;
+                    }
                 }
+            }
+            else
+            {
+                optionList += string.Format("{0} is not a valid directory\n", dir);
             }
 
             return optionList;
